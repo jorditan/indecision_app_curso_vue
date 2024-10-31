@@ -1,6 +1,6 @@
 <template>
   <div v-if="$props.itsMine" class="flex justify-end">
-    <div class="bg-blue-200 text-black p-2 rounded-lg max-w-xs">
+    <div data-testid="message" class="bg-blue-200 text-black p-2 rounded-lg max-w-xs">
       <span class="capitalize">
         {{ message }}
       </span>
@@ -8,7 +8,7 @@
   </div>
 
   <div v-else class="flex">
-    <div class="bg-gray-300 text-black p-2 rounded-lg max-w-xs">
+    <div data-testid="response" class="bg-gray-300 text-black p-2 rounded-lg max-w-xs">
       <span class="capitalize">
         {{ message }}
       </span>

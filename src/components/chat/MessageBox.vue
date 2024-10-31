@@ -1,6 +1,7 @@
 <template>
   <div class="bg-white p-4 flex items-center">
     <input
+      data-testid="input-message"
       type="text"
       placeholder="Type your message..."
       class="flex-1 border rounded-full px-4 py-2 focus:outline-none"

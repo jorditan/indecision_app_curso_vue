@@ -18,6 +18,7 @@
 import { ref, watch } from 'vue';
 import BurbujaMessage from './BurbujaMessage.vue';
 import type { ChatMessage } from '@/interfaces/chat-message.interface';
+
 interface Props {
   messages: ChatMessage[];
 }
@@ -26,7 +27,8 @@ const props = defineProps<Props>();
 
 const chatRef = ref<HTMLDivElement | null>(null);
 
-watch(props.messages, () => {
+watch(props, () => {
+  console.log('se disparó el update de messages');
   setTimeout(() => {
     chatRef.value?.scrollTo({
       top: chatRef.value.scrollHeight,
